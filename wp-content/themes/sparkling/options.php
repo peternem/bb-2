@@ -26,7 +26,11 @@ function optionsframework_option_name() {
 function optionsframework_options() {
 
 		// Layout options
-		$site_layout = array('pull-left' => __('Right Sidebar', 'sparkling'),'pull-right' => __('Left Sidebar', 'sparkling'));
+		$site_layout = array(
+			'col-sm-12 col-md-8 pull-left'		=> __('Right Sidebar','sparkling'),
+			'col-sm-12 col-md-8 pull-right' 	=> __('Left Sidebar', 'sparkling'),
+			'col-sm-12 one-column' 	=> __('One Column', 'sparkling' )
+		);
 
        // Test data
         $test_array = array(
@@ -135,7 +139,7 @@ function optionsframework_options() {
 							'class' => 'hidden',
 							'type' => 'text');
 
-		$options[] = array( 'name' => __('Website Layout Options', 'sparkling'),
+		$options[] = array( 'name' => __('Website Layout Options - Posts', 'sparkling'),
 							'desc' => __('Choose between Left and Right sidebar options to be used as default', 'sparkling'),
 							'id' => 'site_layout',
 							'std' => 'pull-left',

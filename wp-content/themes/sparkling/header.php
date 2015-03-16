@@ -41,37 +41,38 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<div class="row">
-					<div class="site-navigation-inner col-sm-12">
-		        <div class="navbar-header">
-		            <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-		                <span class="sr-only">Toggle navigation</span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		            </button>
-
-				<?php if( get_header_image() != '' ) : ?>
-
-					<div id="logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
-					</div><!-- end of #logo -->
-
-				<?php endif; // header image was removed ?>
-
-				<?php if( !get_header_image() ) : ?>
-
-					<div id="logo">
-						<span class="site-name"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-					</div><!-- end of #logo -->
-
-				<?php endif; // header image was removed (again) ?>
-
-		        </div>
-					<?php sparkling_header_menu(); ?>
-					</div>
-		    </div>
+			<div class="container-fluid">
+				<div class="site-navigation-inner">
+			        <div class="navbar-header">
+			            <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			                <span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			            </button>
+	
+					<?php if( get_header_image() != '' ) : ?>
+	
+						<div id="logo">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<img  class="img-responsive" src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/>
+							</a>
+							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>		
+						</div><!-- end of #logo -->
+	
+					<?php endif; // header image was removed ?>
+	
+					<?php if( !get_header_image() ) : ?>
+	
+						<div id="logo">
+							<span class="site-name"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+						</div><!-- end of #logo -->
+	
+					<?php endif; // header image was removed (again) ?>
+	
+			        </div>
+						<?php sparkling_header_menu(); ?>
+				</div>
 		  </div>
 		</nav><!-- .site-navigation -->
 	</header><!-- #masthead -->
@@ -83,6 +84,12 @@
 			<?php sparkling_call_for_action(); ?>
 		</div>
 
-		<div class="container main-content-area">
+		<div class="container-fluid main-content-area">
+			
 			<div class="row">
-				<div class="main-content-inner <?php echo sparkling_main_content_bootstrap_classes(); ?> <?php echo of_get_option( 'site_layout' ); ?>">
+			<?php if(is_page()) { ?>
+				<div class="main-content-inner page">
+			<?php } else { ?>
+				<div class="main-content-inner <?php //echo sparkling_main_content_bootstrap_classes(); ?> <?php echo of_get_option( 'site_layout' ); ?>">
+			<?php }  ?>
+					

@@ -1,6 +1,6 @@
 /*========= About Theme =========*/
 
-Theme Name: Sparkling
+Theme Name: BenBerden - Sparkling
 Theme URI: http://colorlib.com/wp/sparkling/
 Version: 1.7.7
 Tested up to: WP 4.1
