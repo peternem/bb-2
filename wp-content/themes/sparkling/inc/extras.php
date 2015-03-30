@@ -206,7 +206,7 @@ function sparkling_header_menu() {
     'theme_location'    => 'primary',
     'depth'             => 2,
     'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+    'container_class'   => 'navbar-collapse collapse navbar-ex1-collapse',
     'menu_class'        => 'nav navbar-nav navbar-right',
     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
     'walker'            => new wp_bootstrap_navwalker()

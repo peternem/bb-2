@@ -33,15 +33,19 @@
 <!--[if IE]><?php if ( of_get_option( 'custom_favicon' ) ) { ?><link rel="shortcut icon" href="<?php echo of_get_option( 'custom_favicon' ); ?>" /><?php } ?><![endif]-->
 
 <?php wp_head(); ?>
-
+<style>
+	body {
+		background: url("<? bloginfo('template_url'); ?>/images/bg1.png") repeat-x scroll 0 0 #000000;
+	}
+</style>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container-fluid">
+	<header id="masthead" class="site-header container-fluid" role="banner">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="containerX">
 				<div class="site-navigation-inner">
 			        <div class="navbar-header">
 			            <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -54,7 +58,7 @@
 					<?php if( get_header_image() != '' ) : ?>
 	
 						<div id="logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<a class="navbar-icon" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<img  class="img-responsive" src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/>
 							</a>
 							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>		
@@ -77,14 +81,14 @@
 		</nav><!-- .site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container-fluid">
 
 		<div class="top-section">
 			<?php sparkling_featured_slider(); ?>
 			<?php sparkling_call_for_action(); ?>
 		</div>
 
-		<div class="container-fluid main-content-area">
+		<div class="main-content-area">
 			
 			<div class="row">
 			<?php if(is_page()) { ?>

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900);
+@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900");
 /*
 Theme Name: Sparkling
 Theme URI: http://colorlib.com/wp/themes/sparkling
@@ -37,17 +37,40 @@ sparkling is based on Underscores http://underscores.me/, (C) 2012-2014 Automatt
 14. Social icons
 15. Call For Action
 */
+.container-fluid {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.hfeed.site {
+  padding: 5%;
+}
+/* Navbar
+----------------------------------------------- */
+.navbar-default {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: medium none;
+}
 .navbar-default .navbar-nav > li > a {
   font-weight: bold;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
   font-weight: 600;
+  margin-top: 5%;
   text-transform: uppercase;
 }
 .navbar-default #logo > a {
   display: block;
   float: left;
+  max-width: 245px;
+  width: 100%;
+}
+.navbar-default #logo {
+  display: flex;
+  padding: 8px 0;
+}
+.navbar-collapse .navbar-right {
+  margin-top: 60px;
 }
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
@@ -56,14 +79,40 @@ sparkling is based on Underscores http://underscores.me/, (C) 2012-2014 Automatt
 .main-content-inner.page {
   overflow: auto;
 }
+/* Content Area
+----------------------------------------------- */
+.site-content {
+  background-color: #ffffff;
+  border: 2px solid #cc9933;
+  padding: 2%;
+  background-color: pink;
+}
+.page-header > .entry-title {
+  margin-top: 0;
+}
 .content-area {
   overflow: auto;
-  padding: 2% 5%;
+  background-color: yellow;
 }
-.site-footer {
-  padding: 2% 10%;
+.entry-footer {
+  margin: 25px 0;
 }
-/* Table of content
+.site-info {
+  padding-top: 2%;
+}
+.site-info .copyright.col-md-12 {
+  text-align: center;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+/* =Widget Area
+----------------------------------------------- */
+.widget-area .well {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: medium none;
+  box-shadow: none;
+}
+/* =Scroll To Top
 ----------------------------------------------- */
 .scroll-to-top {
   background: #363636;
@@ -88,4 +137,129 @@ sparkling is based on Underscores http://underscores.me/, (C) 2012-2014 Automatt
 .scroll-to-top:hover {
   background: #DA4453;
   opacity: .8;
+}
+/* =Social icons
+----------------------------------------------- */
+#secondary .widget .social-icons a {
+  color: #fff;
+}
+.social-icons {
+  position: relative;
+  text-align: center;
+}
+#secondary .widget .social-icons {
+  text-align: left;
+}
+.social-icons a {
+  font-size: 18px;
+  line-height: 40px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: #DADADA;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+#footer-area .social-icons a {
+  margin-right: 7px;
+  background-color: #363636;
+  color: #fff;
+}
+.social-icons a.facebook:hover {
+  background-color: #4265b9 !important;
+}
+.social-icons a.twitter:hover {
+  background-color: #55ACEE !important;
+}
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89 !important;
+}
+.social-icons a.flickr:hover {
+  background-color: #ff0084 !important;
+}
+.social-icons a.googleplus:hover {
+  background-color: #d62408 !important;
+}
+.social-icons a.skype:hover {
+  background-color: #0bbff2 !important;
+}
+.social-icons a.pinterest:hover {
+  background-color: #c31e26 !important;
+}
+.social-icons a.linkedin:hover {
+  background-color: #005987 !important;
+}
+.social-icons a.vimeo:hover {
+  background-color: #1bb6ec !important;
+}
+.social-icons a.tumblr:hover {
+  background-color: #35506b !important;
+}
+.social-icons a.youtube:hover {
+  background-color: #df3333 !important;
+}
+.social-icons a.instagram:hover {
+  background-color: #F95B60 !important;
+}
+.social-icons a.rss:hover {
+  background-color: #f39c12 !important;
+}
+.social-icons a.foursquare:hover {
+  background-color: #2398C9 !important;
+}
+.social-icons a.soundcloud:hover {
+  background-color: #F50 !important;
+}
+.social-icons a.github:hover {
+  background-color: #4183C4 !important;
+}
+.fa-googleplus:before {
+  content: "\f0d5";
+}
+.fa-vimeo:before {
+  content: "\f194";
+}
+@media (max-width: 480px) {
+  h1,
+  .h1 {
+    font-size: 31px;
+  }
+  h2,
+  .h2 {
+    font-size: 24px;
+  }
+  h3,
+  .h3 {
+    font-size: 20px;
+  }
+  h4,
+  .h4 {
+    font-size: 18px;
+  }
+  .navbar-default #logo .navbar-icon {
+    display: none;
+  }
+  .post-inner-content .right-col {
+    margin-bottom: 3%;
+  }
+}
+@media (max-width: 768px) {
+  .hfeed.site {
+    padding: 3%;
+  }
+}
+@media (max-width: 992px) {
+  .entry-content {
+    margin-bottom: 10%;
+  }
+  .navbar-collapse .navbar-right {
+    margin-top: 7px;
+  }
 }
