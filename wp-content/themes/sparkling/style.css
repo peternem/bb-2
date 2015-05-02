@@ -1,4 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900");
 /*
 Theme Name: Sparkling
 Theme URI: http://colorlib.com/wp/themes/sparkling
@@ -37,6 +36,7 @@ sparkling is based on Underscores http://underscores.me/, (C) 2012-2014 Automatt
 14. Social icons
 15. Call For Action
 */
+@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900");
 .container-fluid {
   max-width: 1366px;
   margin: 0 auto;
