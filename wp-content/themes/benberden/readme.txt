@@ -2,7 +2,7 @@
 
 Theme Name: BenBerden
 Theme URI: http://colorlib.com/wp/sparkling/
-Version: 1
+Version: 1.00
 Tested up to: WP 4.1
 
 Author: MJPeternell
