@@ -22,6 +22,11 @@
     					'after'  => '</div>',
     				) );
     			?>
+    			 <?php 
+        if ( is_page('sponsors')) {
+            get_template_part('sponsors-adv-fields');
+        }
+        ?>
     		<?php
     		  // Checks if this is homepage to enable homepage widgets
     		  if ( is_front_page() ) :
