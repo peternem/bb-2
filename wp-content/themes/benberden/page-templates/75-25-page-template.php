@@ -8,7 +8,11 @@
  */
 
 get_header(); ?>
-
+       <?php 
+        // if ( is_front_page()) {
+            // get_template_part('index-carousel-template');
+        // }
+        ?>
   <div id="primary" class="content-area">
 
     <main id="main" class="site-main" role="main">
@@ -18,7 +22,8 @@ get_header(); ?>
 		    <?php get_template_part( 'content', 'page' ); ?>
 		
 		  <?php endwhile; // end of the loop. ?>
-
+		  <!-- Load calendar script -->
+		 
     </main><!-- #main -->
 
   </div><!-- #primary -->

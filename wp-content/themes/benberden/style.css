@@ -37,40 +37,50 @@ BenBerden Theme/sparkling is based on Underscores http://underscores.me/, (C) 20
 15. Call For Action
 */
 @import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900");
+body.custom-background {
+  background-size: 100% auto;
+}
 .container-fluid {
-  max-width: 1366px;
-  margin: 0 auto;
+  max-width: 1920px;
+  margin: 0px auto;
 }
 .hfeed.site {
-  padding: 5%;
+  padding: 1% 3%;
+}
+.edit-link {
+  display: inline-block;
+  padding: 5px;
 }
 /* Navbar
 ----------------------------------------------- */
+.navbar-right {
+  margin-right: auto;
+}
 .navbar-default {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border: medium none;
+  border: none;
+  margin-bottom: 3.5%;
 }
 .navbar-default .navbar-nav > li > a {
   font-weight: bold;
 }
 .navbar-default .navbar-brand {
-  color: #ffffff;
+  color: #000000;
   font-weight: 600;
-  margin-top: 5%;
+  height: 93px;
+  line-height: 89px;
+  padding: 0;
   text-transform: uppercase;
 }
-.navbar-default #logo > a {
+.navbar-default .navbar-brand:hover {
+  color: #808080;
+}
+.navbar-default #logo a {
   display: block;
   float: left;
-  max-width: 245px;
-  width: 100%;
-}
-.navbar-default #logo {
-  display: flex;
-  padding: 8px 0;
 }
 .navbar-collapse .navbar-right {
-  margin-top: 60px;
+  margin-top: 1.5555%;
 }
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
@@ -81,18 +91,19 @@ BenBerden Theme/sparkling is based on Underscores http://underscores.me/, (C) 20
 }
 /* Content Area
 ----------------------------------------------- */
-.site-content {
-  background-color: #ffffff;
-  border: 2px solid #cc9933;
-  padding: 2%;
-  background-color: pink;
+.wp-post-image {
+  border: 2px solid #ccc;
 }
 .page-header > .entry-title {
   margin-top: 0;
 }
+.page-header h2 {
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 15px;
+}
 .content-area {
   overflow: auto;
-  background-color: yellow;
 }
 .entry-footer {
   margin: 25px 0;
@@ -138,6 +149,69 @@ BenBerden Theme/sparkling is based on Underscores http://underscores.me/, (C) 20
   background: #DA4453;
   opacity: .8;
 }
+/* =Cycle2 Img Carousel Plugin
+----------------------------------------------- */
+/*
+    these are just the default styles used in the Cycle2 demo pages.  
+    you can use these styles or any others that you wish.
+*/
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow,
+.cycle-slideshow * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cycle-slideshow {
+  width: 100%;
+  min-width: 200px;
+  max-width: 950px;
+  position: relative;
+  background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
+}
+/* slideshow images (for most of the demos, these are the actual "slides") */
+.cycle-slideshow img {
+  /* 
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+  border: 2px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  display: block;
+}
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+  position: static;
+  z-index: 100;
+}
+/* pager */
+.cycle-pager {
+  text-align: center;
+  width: 100%;
+  z-index: 500;
+  position: absolute;
+  bottom: 10px;
+  overflow: hidden;
+}
+.cycle-pager span {
+  font-family: arial;
+  font-size: 50px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+}
+.cycle-pager span.cycle-pager-active {
+  color: #D69746;
+}
+.cycle-pager > * {
+  cursor: pointer;
+}
 /* =Social icons
 ----------------------------------------------- */
 #secondary .widget .social-icons a {
@@ -167,7 +241,10 @@ BenBerden Theme/sparkling is based on Underscores http://underscores.me/, (C) 20
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-#footer-area .social-icons a {
+.footer-area .footer-widget-area {
+  margin-top: 2.5%;
+}
+.footer-area .social-icons a {
   margin-right: 7px;
   background-color: #363636;
   color: #fff;
@@ -227,9 +304,17 @@ BenBerden Theme/sparkling is based on Underscores http://underscores.me/, (C) 20
   content: "\f194";
 }
 @media (max-width: 480px) {
+  body,
+  .entry-content {
+    font-size: 14px !important;
+  }
+  .container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   h1,
   .h1 {
-    font-size: 31px;
+    font-size: 36px;
   }
   h2,
   .h2 {
@@ -243,14 +328,26 @@ BenBerden Theme/sparkling is based on Underscores http://underscores.me/, (C) 20
   .h4 {
     font-size: 18px;
   }
+  table {
+    font-size: 12px !important;
+  }
   .navbar-default #logo .navbar-icon {
     display: none;
+  }
+  .navbar-default #logo > a {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    line-height: 2;
   }
   .post-inner-content .right-col {
     margin-bottom: 3%;
   }
 }
 @media (max-width: 768px) {
+  .navbar-toggle {
+    margin-right: 0;
+  }
   .hfeed.site {
     padding: 3%;
   }

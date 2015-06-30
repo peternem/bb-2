@@ -60,7 +60,7 @@ function sparkling_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'sparkling-featured', 450, 450, true );
+	add_image_size( 'sparkling-featured', 950, 950, true );
 	//add_image_size( 'sparkling-featured', 1366, 535, true );
   	//add_image_size( 'sparkling-featured', 750, 410, true );
 	add_image_size( 'tab-small', 60, 60 , true); // Small Thumbnail
@@ -227,7 +227,7 @@ function sparkling_scripts() {
   }
 
   // Add main theme stylesheet
-	wp_enqueue_style( 'sparkling-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'sparkling-style', get_stylesheet_uri() );
 
   // Add Modernizr for better HTML5 and CSS3 support
   wp_enqueue_script('sparkling-modernizr', get_template_directory_uri().'/inc/js/modernizr.min.js', array('jquery') );
@@ -235,6 +235,8 @@ function sparkling_scripts() {
   // Add Bootstrap default JS
 	wp_enqueue_script('sparkling-bootstrapjs', get_template_directory_uri().'/inc/js/bootstrap.min.js', array('jquery') );
 
+  wp_enqueue_script( 'flexslider-js', get_template_directory_uri() . '/inc/js/jquery.cycle2.js', array('jquery'), '20140222', true );
+  
   // Add slider JS only if is front page ans slider is enabled
 	if( ( is_home() || is_front_page() ) && of_get_option('sparkling_slider_checkbox') == 1 ) {
 		wp_enqueue_script( 'flexslider-js', get_template_directory_uri() . '/inc/js/flexslider.min.js', array('jquery'), '20140222', true );

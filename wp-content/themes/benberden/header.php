@@ -33,11 +33,7 @@
 <!--[if IE]><?php if ( of_get_option( 'custom_favicon' ) ) { ?><link rel="shortcut icon" href="<?php echo of_get_option( 'custom_favicon' ); ?>" /><?php } ?><![endif]-->
 
 <?php wp_head(); ?>
-<style>
-	body {
-		background: url("<? bloginfo('template_url'); ?>/images/bg1.png") repeat-x scroll 0 0 #000000;
-	}
-</style>
+
 </head>
 
 <body <?php body_class(); ?>>

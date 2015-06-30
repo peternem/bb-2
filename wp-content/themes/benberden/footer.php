@@ -12,7 +12,7 @@
 	</div><!-- close .container -->
 </div><!-- close .site-content -->
 
-	<div id="footer-area" class="container-fluid">
+	<div id="footerArea" class="footer-area container-fluid">
 		<div class="containerx footer-inner">
 			<div class="row">
 				<?php get_sidebar( 'footer' ); ?>
